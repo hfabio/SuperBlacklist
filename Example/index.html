@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Super Nova Super Input Char Blacklist</title>
+    <script src="./js/SuperInputBlackList.min.js"></script>
+    <style>
+        :root {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            align-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .title {
+            display: block;
+            text-align: center;
+        }
+
+        .content {
+            margin-top: 15%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .container {
+            width: 400px;
+            text-align: center;
+        }
+
+        .container input {
+            border-radius: 5px;
+            border-color: black;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>Black list for input</h1>
+        <h2>Developed by SuperNova team</h2>
+    </div>
+    <div class="content">
+        <div class="container">
+            <label for="default">Default input without blacklist</label>
+            <br>
+            <input id="default" type="text">
+            <br>
+            <small>No black list</small>
+        </div>
+        <div class="container">
+            <label for="input1">Blacklist with default separator</label>
+            <br>
+            <input id="input1" SuperInput-blacklist="a][b][x][test][dq][*dq*" type="text">
+            <br>
+            <small>Blacklist: a, b, x, test, dq, "</small>
+        </div>
+        <div class="container">
+            <label for="input2">Blacklist with custom separator</label>
+            <br>
+            <input id="input2" SuperInput-blacklist="a*#*b*#*x*#*test*#**dq*" SuperInput-sep="*#*" type="text">
+            <br>
+            <small>Blacklist: a, b, x, test, "</small>
+        </div>
+    </div>
+</body>
+
+<script>
+    SuperInput.initialize();
+</script>
+
+</html>
