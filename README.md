@@ -40,6 +40,8 @@ We developed using the HTML onkeyup attribute, so you will lose this attribute f
 
 ## Authors
 #### We are SuperNova team
+ [<img src="https://avatars1.githubusercontent.com/u/15989467?s=180&v=4"><br><sub>@hfabio</sub>](https://github.com/hfabio) | [<img src="https://avatars0.githubusercontent.com/u/1203362?s=180&v=4"><br><sub>@irahe</sub>](https://github.com/Irahe) |
+ | :---: | :---: |
 * **Helton Fábio** - *Built this project, in code and example* - [Helton Fábio](https://github.com/hfabio/)
 * **José Irahe** - *Helps with the code* - [José Irahe](https://github.com/Irahe)
 
