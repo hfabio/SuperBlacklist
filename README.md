@@ -12,7 +12,7 @@ A simple library to create a HTML input blacklist
 This library was built in JavaScript and is used to clear from the input target the words in blacklist
 
 ## Getting Started
-First of all you need to fork this repository (or download a release .js file).
+First of all you need to fork this repository (or [download a release .js file](https://github.com/hfabio/SuperBlacklist/releases/download/v0.0.0.0.0.2/SuperBlacklist.rar)).
 
 ```
     git clone https://github.com/hfabio/SuperBlacklist.git
