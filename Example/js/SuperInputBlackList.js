@@ -54,12 +54,12 @@ var SuperInput = {
         }
         let callback = obj.getAttribute('SuperInput-onkeyup')
         if (obj.getAttribute('SuperInput-onkeyup').includes('this.')) {
-            //get what attribute the user wants from the element
             let attribute = obj.getAttribute('SuperInput-onkeyup').split('this.')[1];
-            //clean the attribute
+
             attribute = attribute.split(')').join('').split(',')[0];
-            //rejoice wit this juicy element's attribute
+            //console.log(attribute);
             callback = obj.getAttribute('SuperInput-onkeyup').split('this.' + attribute).join('"' + obj[attribute] + '"');
+            //console.log(callback);
         }
 
 
