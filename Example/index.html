@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Super Nova Super Input Char Blacklist</title>
-    <script src="./js/SuperInputBlackList.min.js"></script>
+    <script src="./js/SuperInputBlackList.js"></script>
+    <script>
+        function myCustomKeyUpFunction(foo, bar, evt) {
+            console.log(foo);
+            console.log(bar);
+            console.log(evt);
+        }
+    </script>
     <style>
         :root {
             margin: 0;
@@ -73,6 +80,13 @@
             <input id="input2" SuperInput-blacklist="a*#*b*#*x*#*test*#**dq*" SuperInput-sep="*#*" type="text">
             <br>
             <small>Blacklist: a, b, x, test, "</small>
+        </div>
+        <div class="container">
+            <label for="input3">Event "onKeyUp" passthru</label>
+            <br>
+            <input SuperInput-onkeyup="myCustomKeyUpFunction(this.value, 'xyz', event)" id="input1" SuperInput-blacklist="a][b][x][test][dq][*dq*" type="text">
+            <br>
+            <small>Blacklist: a, b, x, test, dq, "</small>
         </div>
     </div>
 </body>
