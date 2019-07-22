@@ -36,7 +36,14 @@ Don't like the default separator? you can change the separator inserting a Super
 Note:. Of course you'll need to change the separator on black-list declaration
 
 ### Limitations
-We developed using the HTML onkeyup attribute, so you will lose this attribute for another purposes
+~~We developed using the HTML onkeyup attribute, so you will lose this attribute for another purposes~~
+
+#### Edit 07/21/2019
+Now you can add an OnKeyUp event using lib's attribute called SuperInput-onkeyup, so you can pass parameters, the element reference (this or this.value) and also the event itself (event for key events like enter or escape) just like this:
+```
+    <input SuperInput-onkeyup="myCustomKeyUpFunction(this.value, 'xyz', event)" id="input1" SuperInput-blacklist="a][b][x][test][dq][*dq*" type="text">
+```
+It will be executed after the blacklist cleanup like a callback function.
 
 ## Authors
 #### We are SuperNova team
