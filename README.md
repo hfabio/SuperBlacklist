@@ -1,4 +1,11 @@
 # SuperBlacklist
+## Index
+ * [1 - Getting started](#getting-started)
+ * [2 - Limitations](#limitations)
+ * [3 - Updates](#updates)
+   * [3.1 - Update 07/21/2019](#07212019)
+ * [Authors](#authors)
+ * [License](#license)
 
 A simple library to create a HTML input blacklist
 
@@ -36,7 +43,18 @@ Don't like the default separator? you can change the separator inserting a Super
 Note:. Of course you'll need to change the separator on black-list declaration
 
 ### Limitations
-We developed using the HTML onkeyup attribute, so you will lose this attribute for another purposes
+If you know any limitation, please create a issue, we'll be very happy to help!
+
+~~We developed using the HTML onkeyup attribute, so you will lose this attribute for another purposes~~
+
+## Updates
+
+### 07/21/2019
+Now you can add an OnKeyUp event using lib's attribute called SuperInput-onkeyup, so you can pass parameters, the element reference (this or this.value) and also the event itself (event for key events like enter or escape) just like this:
+```
+    <input SuperInput-onkeyup="myCustomKeyUpFunction(this.value, 'xyz', event)" id="input3" SuperInput-blacklist="a][b][x][test][dq][*dq*" type="text">
+```
+It will be executed after the blacklist cleanup like a callback function.
 
 ## Authors
 #### We are SuperNova team
