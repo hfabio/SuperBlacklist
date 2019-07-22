@@ -44,6 +44,7 @@ Note:. Of course you'll need to change the separator on black-list declaration
 
 ### Limitations
 If you know any limitation, please create a issue, we'll be very happy to help!
+
 ~~We developed using the HTML onkeyup attribute, so you will lose this attribute for another purposes~~
 
 ## Updates
