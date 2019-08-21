@@ -1,8 +1,24 @@
+/**
+ * @class SuperInput
+ * 
+ * @function initialize
+ * initializate the instance to add listeners in selects
+ * @param {String} customSeparator // receives the separator between the words to be separated
+ * 
+ * @function SuperCleanInput
+ * @param {HTMLelement} obj // receive an element to be watched
+ * 
+ * 
+ * @function SuperCleanInputWithCallback
+ * @param {HTMLelement} obj // receive an element and get its binded onKeyUp to be watched
+ * @returns {function} // here we can return the string of callback fetched with eval  
+ */
+
 var SuperInput = {
     instance: {},
     objects: [],
     separator: "",
-    initialize: function(customSeparator = "][") {
+    initialize: function (customSeparator = "][") {
         this.separator = customSeparator;
         this.objects = document.querySelectorAll('input[SuperInput-blacklist]');
         for (let object of this.objects) {
@@ -14,7 +30,7 @@ var SuperInput = {
         }
         console.log(`Super Input (Built by SuperNova team) successfully initialized in ${this.objects.length} elements.`);
     },
-    SuperCleanInput: function(obj) {
+    SuperCleanInput: function (obj) {
 
         let rawBlacklist = obj.getAttribute("SuperInput-blacklist");
         let sep = this.separator;
@@ -34,7 +50,7 @@ var SuperInput = {
         }
     },
 
-    SuperCleanInputWithCallback: function(obj) {
+    SuperCleanInputWithCallback: function (obj) {
 
         let rawBlacklist = obj.getAttribute("SuperInput-blacklist");
         let sep = this.separator;
